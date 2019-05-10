@@ -2,4 +2,5 @@
 Angular app for the member management
 
 ## Authors
-- AliOgretmen
+- Ali Ogretmen
+- Mehmet Dogan
