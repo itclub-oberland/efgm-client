@@ -2,5 +2,14 @@
 Angular app for the member management
 
 ## Authors
+- Ali Ogretmen
+- Mehmet Dogan
+- Java A.
 - Ali Ogretmen..
-- Mehmet Dogan.
+- Mehmet Dogan
+- Hamide Bay...,..
+- Hamide Bay
+- Sükrü Ünlü
+- Rabia Taskin
+
+
