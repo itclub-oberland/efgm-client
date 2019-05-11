@@ -10,4 +10,6 @@ Angular app for the member management
 - Hamide Bay...,..
 - Hamide Bay
 - Sükrü Ünlü
+- Rabia Taskin
+
 
