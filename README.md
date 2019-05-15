@@ -13,6 +13,6 @@ Angular app for the member management
 - Rabia Taskin
 
 # TestFooter
-- Hamide Bay
+- Hamide Bayit
 
 
