@@ -1,0 +1,43 @@
+* {
+                   margin: 0;
+                   padding: 0;
+
+}
+
+
+div {
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: wrap;
+                   justify-content: space-around;
+                   flex: 1;
+
+
+}
+
+.sitemap-title{
+                   font-weight: bolder;
+}
+
+
+.footer-content {
+                   background: #fff;
+                   font-family: RobotoRegular, Arial, sans-serif;
+                   font-size: 1.4 rem;
+                 line-height: 2.6 rem;
+                   color: #505050;
+}
+
+ul li {
+                   font-weight: 300;
+                   list-style-type: none;
+                   color: #505050;
+
+}
+
+a {
+                   text-decoration-line: none;
+                   color: rgb(0, 0, 0);
+                   z-index: 7;
+                   margin-top: 10%
+}
