@@ -1,9 +1,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-#main{display: flex;
-justify-content: center;
-width: 100%;}
+#main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 #header-area {
     display: flex;
@@ -13,7 +15,7 @@ width: 100%;}
     flex-direction: column;
 }
 
-#homeAndLanguageArea{
+#homeAndLanguageArea {
     display: flex;
     width: 100%;
     height: 20px;
@@ -27,12 +29,14 @@ width: 100%;}
     width: 100%;
     background-color: #D48A04;
     justify-content: center;
-   
+
 }
 
-#logoAndSearchArea{display: flex;
-width: 100%;
-align-items: center;}
+#logoAndSearchArea {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 
 #logo {
     width: 360px;
@@ -41,24 +45,38 @@ align-items: center;}
     justify-content: flex-start;
 }
 
-input{width: 310px;
-height: 32px;
-background-color: #F2F2F2;
-font-size: 14px;
-font-weight: bold;
-border: none;
-padding-left: 20px;
-font-style: italic;
-justify-content: flex-end;
-margin-left: 400px;}
+input {
+    width: 310px;
+    height: 32px;
+    background-color: #F2F2F2;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding-left: 20px;
+    font-style: italic;
+    justify-content: flex-end;
+    margin-left: 400px;
+}
 
-#search-icon{margin-left: -25px;}
+#search-icon {
+    margin-left: -25px;
+}
 
-#home-icon{justify-content: flex-start; text-align: left;
-color: #505050;
-width: 20px;
-height: 17px;}
+#home-icon {
+    justify-content: flex-start;
+    text-align: left;
+    color: #505050;
+    width: 20px;
+    height: 17px;
+}
 
-a{text-decoration: none;  margin-right: 10px; font-family: Frutiger, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: Frutiger, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-#language-area{margin-left: 73%;}
+#language-area {
+    margin-left: 73%;
+}
+
