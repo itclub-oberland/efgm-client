@@ -1,0 +1,122 @@
+#main-content {
+    display: flex;
+    justify-content: center;
+}
+
+tr {
+    width: 350px;
+    height: 20px;
+    padding: none;
+}
+
+td {
+    width: 200px;
+}
+
+p {
+    width: 150px;
+    text-align: end;
+}
+
+.full-width {
+    width: 230px;
+}
+
+.half-width:first-child {
+    width: 175px;
+    display: inline-block;
+}
+
+.half-width:nth-child(2) {
+    width: 52px;
+    display: inline-block;
+}
+
+.gender {
+    width: 50px;
+    display: inline-block;
+}
+
+#gender-row {
+    width: 220px;
+    display: inline-block;
+}
+
+#plz {
+    width: 52px;
+}
+
+#city {
+    width: 175px;
+}
+
+.raised-btn {
+    border-radius: 50%;
+    margin-left: -185px;
+}
+
+button {
+    text-align: start;
+
+
+}
+
+table {
+    background-color: #F6F6f6;
+    font-family: 'Open Sans', sans-serif;
+    font: 400 13.3333px Arial;
+    color: #7a7a7a;
+    margin: 20px;
+
+}
+
+#table-border {
+
+    border: 5px outset #D48A04;
+    ;
+    height: 500px;
+    width: 670px;
+    padding: 20px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#image-space {
+    width: 155px;
+    background-color: #F6F6f6;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.btn {
+    display: block;
+    width: 155px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-width: 2px;
+
+  
+
+}
+
+#save-profil {
+    margin-top: 45px;
+
+}
+
+#upload {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+
+
+#img-area {
+    width: 155px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
