@@ -1,0 +1,56 @@
+
+
+
+
+<div id="nav">
+  <div class="bar">
+    <div class="btn_Nav">
+        <a href="#home" class="active">Menu</a>
+      <button id="btn_Nav" mat-button [matMenuTriggerFor]="menu">Home</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button id="btn_Nav" mat-button [matMenuTriggerFor]="menu">About us</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button id="btn_Nav" mat-button [matMenuTriggerFor]="menu">Contact</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button id="btn_Nav" mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button id="btn_Nav" mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+    <div class="log_in">
+       
+      <button class="btn_login">Login</button>
+    </div>
+    <div class="mob_Menu">
+    <button class="btn_Mob_Menu"><i class="material-icons">menu</i></button>
+  </div>
+  </div>
+
+</div>
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("btn_Nav");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
