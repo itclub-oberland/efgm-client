@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GMComponent } from './gm.component';
+import { GMComponent } from './persondetail.component';
 
 describe('GMComponent', () => {
   let component: GMComponent;

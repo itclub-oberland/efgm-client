@@ -5,7 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 
 
 @Component({
-  selector: 'app-header',
+  selector: 'efgm-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

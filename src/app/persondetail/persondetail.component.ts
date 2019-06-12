@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-gm',
-  templateUrl: './gm.component.html',
-  styleUrls: ['./gm.component.scss']
+  selector: 'efgm-persondetail',
+  templateUrl: './persondetail.component.html',
+  styleUrls: ['./persondetail.component.scss']
 })
 export class GMComponent implements OnInit {
   selectedFile: File = null;
