@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboardnav',
+  selector: 'efgm-dashboardnav',
   templateUrl: './dashboardnav.component.html',
   styleUrls: ['./dashboardnav.component.scss']
 })
-export class DashboardnavComponent implements OnInit {
+export class DashboardNavComponent implements OnInit {
 
   constructor() { }
 

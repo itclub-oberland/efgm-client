@@ -1,6 +1,19 @@
-<div id="dashboard">
-    <button mat-raised-button>Anfragen</button>
-    <button mat-raised-button>Offerten</button>
-    <button mat-raised-button>Activity Log</button>
-    <button mat-raised-button>Message</button>
+<div class="main"><mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+  
+          <button mat-raised-button routerLink='/anfragen'>Anfragen</button>
+          <button mat-raised-button routerLink='/offerten'>Offerten</button>
+          <button mat-raised-button routerLink='/activitylog'>Activity Log</button>
+          <button mat-raised-button routerLink='/message'>Message</button>
+          <button mat-raised-button routerLink='/personenlist'>Personen Liste</button>
+    
+     
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 </div>
+

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardNavComponent } from './dashboardnav.component';
+import { ActivitylogComponent } from './activitylog.component';
 
-describe('DashboardnavComponent', () => {
-  let component: DashboardNavComponent;
-  let fixture: ComponentFixture<DashboardNavComponent>;
+describe('ActivitylogComponent', () => {
+  let component: ActivitylogComponent;
+  let fixture: ComponentFixture<ActivitylogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardNavComponent ]
+      declarations: [ ActivitylogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardNavComponent);
+    fixture = TestBed.createComponent(ActivitylogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
