@@ -1,9 +1,9 @@
 #dashboard {
-    display: block;
+    display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 10%;
     height: 380px;
-    margin-left: 250px;
+    margin-left: 40px;
     background-color: #D48A04;
     opacity: 0.7;
     padding: 10px;
@@ -12,7 +12,7 @@
 }
 
 button {display: block;
-    width: 200px;
+    width: 100px;
     height: 80px;
     margin-left: 25px;
   

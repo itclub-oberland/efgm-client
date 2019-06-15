@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,7 +9,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
-
+import {LoginPageComponent} from './login-page/login-page.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -18,7 +18,9 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     HeaderComponent,
     DashboardnavComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginPageComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     HomeModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
