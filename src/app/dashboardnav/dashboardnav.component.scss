@@ -27,7 +27,7 @@ button {
 }
 
 
-
+button:first-child{margin-top: 10px;}
 
 
 .main {
@@ -40,15 +40,24 @@ mat-nav-list {
     height: 100%;
     background-color: #D48A04;
     overflow: hidden;
+    width: 245px;
+  
+   
 }
 
 mat-sidenav-content{
-  height: 410px;
+  height: 445px;
     width: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
+   
+    
 }
 
-mat-drawer{background-color: #D48A04;}
-.mat-drawer-inner-container{overflow: hidden;}
+mat-drawer{background-color: #D48A04;
+overflow: hidden;
+}
+
+div.mat-drawer-inner-container{overflow: hidden;}
+
