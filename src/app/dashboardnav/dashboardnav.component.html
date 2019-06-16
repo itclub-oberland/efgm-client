@@ -6,13 +6,13 @@
           <button mat-raised-button routerLink='/offerten'>Offerten</button>
           <button mat-raised-button routerLink='/activitylog'>Activity Log</button>
           <button mat-raised-button routerLink='/message'>Message</button>
-          <button mat-raised-button routerLink='/personenlist'>Personen Liste</button>
+          <button mat-raised-button routerLink='/personlist'>Personen Liste</button>
     
      
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
- 
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 </div>
