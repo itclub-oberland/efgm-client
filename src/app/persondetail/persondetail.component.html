@@ -1,139 +1,76 @@
 <div id="main-content">
+
   <div id="table-border">
-  <table>
-    <tr>
-      <td>
-        <p>Vollständiger Name</p>
-      </td>
-      <td><input type="text" class="full-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Benutzername</p>
-      </td>
-      <td><input type="text" class="full-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Geburtsdatum</p>
-      </td>
-      <td><input type="date" class="full-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Geschlecht</p>
-      </td>
-      
-      <td><div id="gender-row">
-        <p class="gender">Weiblich</p><input type="checkbox" class="gender" id="woman">
-        <p class="gender">Männlich</p><input type="checkbox" class="gender" id="man">
-      </div></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Strasse, Nr</p>
-      </td>
-      <td><input type="text" class="half-width"><input type="number" class="half-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>PLZ, Ort</p>
-      </td>
-      <td><input type="number" class="half-width" id="plz"><input type="text" class="half-width" id="city"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Email</p>
-      </td>
-      <td><input type="email" class="full-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Handynummer</p>
-      </td>
-      <td><input type="number" class="full-width"></td>
-    </tr>
-    <tr>
-      <td>
-        <p>Verwandte</p>
-      </td>
-      <td><button mat-raised-button class="raised-btn">+</button></td>
-  
-    <tr>
-      <td>
-        <p>Talents</p>
-      </td>
-      <td><button mat-raised-button class="raised-btn">+</button></td>
-    </tr>
-  </table>
-  
-  <div id="right-side">
-  <div id="image-space"></div>
-  <input type="file" (change)= "onFileSelected($event)" id="upload">
-  <button mat-raised-button type="button" class="btn" id="save-img" (click)="onUpload()">Bild speichern</button>
-  <div id="img-area"><img src="./assets/papatya.PNG"></div>
-  <button mat-raised-button class="btn" id="save-profil">Profil speichern</button>
-  </div>
-  </div>
- 
+    <div id="left-side">
+      <mat-form-field>
+        <input matInput placeholder="Vorname" class="full-width">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Name" class="full-width">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Benutzername" class="full-width">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Geburtsdatum" type="date" class="full-width">
+      </mat-form-field>
 
+      <mat-form-field id="strateNr">
+        <input matInput placeholder="Strasse" class="half-width" id="strate">
+        <input matInput placeholder="Nummer" type="number" class="half-width" id="number">
+      </mat-form-field>
 
-  <div >
-    <mat-form-field>
-      <input matInput placeholder="Vorname">
-    </mat-form-field>
-     <mat-form-field>
-      <input matInput placeholder="Name">
-    </mat-form-field>
-   <mat-form-field>
-      <input matInput placeholder="Benutzername">
-    </mat-form-field>
-     <mat-form-field>
-      <input matInput placeholder="Geburtsdatum" type="date">
-    </mat-form-field>
-  
-   <mat-form-field>
-    <p>Geschlecht</p><mat-checkbox>Weiblich</mat-checkbox><mat-checkbox>Männlich</mat-checkbox>
-    </mat-form-field>
-  
       <mat-form-field>
-      <input matInput placeholder="Strasse"><input matInput placeholder="Nummer" type="number">
-    </mat-form-field>
-  
+        <input matInput placeholder="PLZ" type="number" id="PLZ">
+        <input matInput placeholder="Ort" class="half-width" id="city">
+      </mat-form-field>
+
       <mat-form-field>
-      <input matInput placeholder="PLZ" type="number"><input matInput placeholder="Ort">
-    </mat-form-field>
-  
-     <mat-form-field>
-      <input matInput placeholder="Email" type="email">
-    </mat-form-field>
-  
-     <mat-form-field>
-      <input matInput placeholder="Handynumber" type="number">
-    </mat-form-field>
-  
-   <mat-form-field>
-      <p>Verwandte</p><mat-icon>add</mat-icon>
-    </mat-form-field>
-     <mat-form-field>
-      <p>Talents</p><mat-icon>add</mat-icon>
-    </mat-form-field>
-  
-    <mat-form-field>
-      <mat-card>Foto</mat-card>
-    </mat-form-field>
-  
-     <mat-form-field>
-      <mat-button-toggle>Foto hochladen</mat-button-toggle>
-    </mat-form-field>
-  
+        <input matInput placeholder="Email" type="email" class="full-width">
+      </mat-form-field>
+
       <mat-form-field>
-      <mat-button-toggle>Bild speichern</mat-button-toggle>
-    </mat-form-field>
-  
+        <input matInput placeholder="Handynummer" type="number" class="full-width">
+      </mat-form-field>
+
+      <mat-form-field id="gender-row">
+
+        <mat-checkbox class="gender" id="woman">Weiblich</mat-checkbox>
+        <mat-checkbox class="gender" id="man">Männlich</mat-checkbox>
+      </mat-form-field>
+
+      <mat-form-field class="textButton">
+        <input matInput placeholder="Verwandte" type="text" id="relations" readonly>
+        <mat-button-toggle>
+          <mat-icon class="raised-btn" id="relations-btn">add</mat-icon>
+        </mat-button-toggle>
+
+      </mat-form-field>
+      <mat-form-field class="textButton">
+        <input matInput placeholder="Talents" type="text" id="talents" readonly>
+        <mat-button-toggle>
+          <mat-icon class="raised-btn" id="talents-btn">add</mat-icon>
+        </mat-button-toggle>
+
+      </mat-form-field>
+    </div>
+
+    <div id="right-side">
       <mat-form-field>
-      <mat-button-toggle>Profil speichern</mat-button-toggle>
-    </mat-form-field>
-  
+        <mat-card id="image-space">Foto</mat-card>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-button-toggle class="btn" id="upload">Foto hochladen</mat-button-toggle>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-button-toggle class="btn" id="save-img">Bild speichern</mat-button-toggle>
+      </mat-form-field>
+
+      <mat-form-field id="img-area">
+        <mat-button-toggle class="btn" id="save-profil">Profil speichern</mat-button-toggle>
+      </mat-form-field>
+    </div>
   </div>
 </div>
