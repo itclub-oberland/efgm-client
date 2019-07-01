@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './persondetail.component.html',
   styleUrls: ['./persondetail.component.scss']
 })
-export class GMComponent implements OnInit {
+export class PersonDetailComponent implements OnInit {
   selectedFile: File = null;
   imgFile = null;
   constructor(private http:HttpClient) { }

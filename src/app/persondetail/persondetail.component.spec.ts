@@ -1,21 +1,21 @@
     
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GMComponent } from './persondetail.component';
+import { PersonDetailComponent } from './persondetail.component';
 
 describe('GMComponent', () => {
-  let component: GMComponent;
-  let fixture: ComponentFixture<GMComponent>;
+  let component: PersonDetailComponent;
+  let fixture: ComponentFixture<PersonDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GMComponent ]
+      declarations: [ PersonDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GMComponent);
+    fixture = TestBed.createComponent(PersonDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

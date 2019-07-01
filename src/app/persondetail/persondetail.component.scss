@@ -25,17 +25,15 @@ p {
 
 .full-width {
     width: 300px;
-    margin-left: 50px;
     height: 25px;
 
 }
 
-#strateNr{display: flex; margin-top: -2px; flex-direction: row;}
+#strateNr{display: flex;}
 
 #strate {
     width: 220px;
     display: inline-block;
-    margin-left: 50px;
     height: 25px;
  
 }
@@ -43,34 +41,34 @@ p {
 #number {
     width: 77px;
     display: flex;
-    margin-left: 273px;
     height: 25px;
     margin-top: 0;
+    margin-left: 5px;
       
 }
+.mat-datapicker-toggle{height: 25px; margin-left: -50px;}
+.mat-icon-button {height: 25px;}
 
-#PLZ{width: 77px; display: inline-block; margin-left: 50px; height: 25px;}
+#PLZ{width: 77px; display: flex; height: 25px;}
 #city {
     display: inline-block;
     width: 220px;
-    margin-left: 127px;
     height: 25px;
 }
 
 
 
-#woman{margin-left: 10px;}
-#man{margin-left: 200px; margin-top: -150px;}
+#woman{margin-left: 10px; font: inherit;}
+#man{margin-left: 200px;}
 
 #gender-row {
     width: 300px;
     display: flex;
-    flex-direction: row;
-    margin-left: 50px;
+    margin-top: 40px;
 }
 
 
-
+#plzCity{display: flex;}
 
 
 .raised-btn {
@@ -105,7 +103,7 @@ table {
     padding: 20px;
     display: flex;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: left;
 }
 
 #image-space {
@@ -127,6 +125,8 @@ table {
 
 
 }
+
+.form{height: 20px;}
 
 #save-profil {
     margin-top: 345px;
@@ -153,11 +153,12 @@ table {
     margin-left: 30px;
 }
 
-div.mat-form-field-infix {
+.mat-form-field-infix {
     padding: 0;
     border-top: 0;
     height: 0px;
     display: flex;
+    height: 25px;
 }
 
 
@@ -190,10 +191,23 @@ div.mat-form-field-infix {
 #relations, #talents{
     height: 25px;
     width: 100px;
-    margin-left: 50px;
+   
 }
 
 #talents-btn{margin-top: -65px;}
 #relations-btn{margin-top: -65px;}
 
-.textButton{display: flex;}
+.textButton{display: flex; width: 150px;}
+
+#birth{display: flex;}
+.mat-form-field{ margin-top: 35px; padding: 0 !important;}
+
+.mat-form-field-appearance-outline.mat-form-field-infix{padding-top: 0px !important; padding-bottom: 0px !important}
+
+div.mat-form-field-infix{padding-top: 0px !important;
+padding-bottom: 0px !important;}
+.mat-input-element{padding: 0 !important;}
+
+
+
+

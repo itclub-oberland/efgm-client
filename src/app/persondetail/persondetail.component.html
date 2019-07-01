@@ -2,75 +2,73 @@
 
   <div id="table-border">
     <div id="left-side">
-      <mat-form-field>
+      <div class="form">
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Vorname" class="full-width">
       </mat-form-field>
-      <mat-form-field>
+    </div>
+
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Name" class="full-width">
       </mat-form-field>
-      <mat-form-field>
+
+      <mat-form-field appearance="outline">
+
         <input matInput placeholder="Benutzername" class="full-width">
       </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Geburtsdatum" type="date" class="full-width">
+
+      <div id="birth">
+        <mat-form-field class="textButton" appearance="outline">
+
+          <input matInput placeholder="Geburtsdatum" readonly>
+
+        </mat-form-field>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+
+      <div id="gender-row">
+          <mat-checkbox class="gender" id="woman">Weiblich</mat-checkbox>
+          <mat-checkbox class="gender" id="man">Männlich</mat-checkbox>
+      </div>
+
+      <mat-form-field appearance="outline">
+        <div id="strateNr">
+         
+          <input matInput placeholder="Strasse" class="half-width" id="strate">
+       
+          <input matInput placeholder="Nummer" type="text" class="half-width" id="number">
+        </div>
       </mat-form-field>
 
-      <mat-form-field id="strateNr">
-        <input matInput placeholder="Strasse" class="half-width" id="strate">
-        <input matInput placeholder="Nummer" type="number" class="half-width" id="number">
+      <mat-form-field appearance="outline">
+        <div id="plzCity">
+          <input matInput placeholder="PLZ" type="text" id="PLZ">
+          <input matInput placeholder="Ort" class="half-width" id="city">
+        </div>
       </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="PLZ" type="number" id="PLZ">
-        <input matInput placeholder="Ort" class="half-width" id="city">
-      </mat-form-field>
-
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <input matInput placeholder="Email" type="email" class="full-width">
       </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Handynummer" type="number" class="full-width">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Handynummer" type="text" class="full-width">
       </mat-form-field>
 
-      <mat-form-field id="gender-row">
-
-        <mat-checkbox class="gender" id="woman">Weiblich</mat-checkbox>
-        <mat-checkbox class="gender" id="man">Männlich</mat-checkbox>
+      <mat-form-field class="textButton" appearance="outline">
+        <div>
+          <input matInput placeholder="Verwandte" type="text" readonly>
+        </div>
       </mat-form-field>
 
-      <mat-form-field class="textButton">
-        <input matInput placeholder="Verwandte" type="text" id="relations" readonly>
-        <mat-button-toggle>
-          <mat-icon class="raised-btn" id="relations-btn">add</mat-icon>
-        </mat-button-toggle>
-
-      </mat-form-field>
-      <mat-form-field class="textButton">
-        <input matInput placeholder="Talents" type="text" id="talents" readonly>
-        <mat-button-toggle>
-          <mat-icon class="raised-btn" id="talents-btn">add</mat-icon>
-        </mat-button-toggle>
-
+      <mat-form-field class="textButton" appearance="outline">
+        <input matInput placeholder="Talents" type="text" readonly>
       </mat-form-field>
     </div>
 
-    <div id="right-side">
-      <mat-form-field>
-        <mat-card id="image-space">Foto</mat-card>
-      </mat-form-field>
+    <div id="right-side"></div>
 
-      <mat-form-field>
-        <mat-button-toggle class="btn" id="upload">Foto hochladen</mat-button-toggle>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-button-toggle class="btn" id="save-img">Bild speichern</mat-button-toggle>
-      </mat-form-field>
-
-      <mat-form-field id="img-area">
-        <mat-button-toggle class="btn" id="save-profil">Profil speichern</mat-button-toggle>
-      </mat-form-field>
-    </div>
   </div>
 </div>
