@@ -222,11 +222,10 @@ var EntrypointComponent = /** @class */ (function () {
     }
     EntrypointComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var email = this.cookieService.get('current_user_email');
-        var token = this.cookieService.get('current_user_token');
-        console.log('hele buraya bir bakasin 2', { email: email, token: token });
+        var email = this.cookieService.get('current_user_email') || null;
+        var token = this.cookieService.get('current_user_token') || null;
         this.loginService.getByCookie({ email: email, token: token }).subscribe(function (response) {
-            console.log('hele buraya bir bakasin 222', { email: email, token: token });
+            console.log('hele buraya bir bakasin 222', response);
             if (response && response.authorized) {
                 _this.router.navigate(['management']);
             }

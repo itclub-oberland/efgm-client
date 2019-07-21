@@ -14,11 +14,10 @@ export class EntrypointComponent implements OnInit {
      private route: ActivatedRoute, private cookieService: CookieService) { }
 
   ngOnInit() {
-    const email = this.cookieService.get('current_user_email');
-    const token = this.cookieService.get('current_user_token');
-    console.log('hele buraya bir bakasin 2', { email, token});
+    const email = this.cookieService.get('current_user_email') || null;
+    const token = this.cookieService.get('current_user_token') || null;
     this.loginService.getByCookie({ email, token}).subscribe(response => {
-      console.log('hele buraya bir bakasin 222', { email, token});
+      console.log('hele buraya bir bakasin 222', response);
       if (response && response.authorized) {
         this.router.navigate(['management']);
       } else {
