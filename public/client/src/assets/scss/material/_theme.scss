@@ -1,0 +1,45 @@
+
+$mat-custom: (
+  50:     $EFGM50,
+  100:    $EFGM100,
+  200:    $EFGM200,
+  300:    $EFGM300,
+  400:    $EFGM400,
+  500:    $EFGM500,
+  600:    $EFGM600,
+  700:    $EFGM700,
+  800:    $EFGM800,
+  900:    $EFGM900,
+  A100:   $EFGM100,
+  A200:   $EFGM200,
+  A400:   $EFGM400,
+  A700:   $EFGM700,
+  contrast: (
+    50:   $black-87-opacity,
+    100:  $black-87-opacity,
+    200:  $black-87-opacity,
+    300:  $black-87-opacity,
+    400:  white,
+    500:  white,
+    600:  $white-87-opacity,
+    700:  $white-87-opacity,
+    800:  $white-87-opacity,
+    900:  $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: white,
+    A700: $white-87-opacity,
+  )
+);
+
+
+
+$my-app-primary: mat-palette($mat-custom, 700, 300, 900);
+$my-app-accent:  mat-palette($mat-custom);
+$my-app-warn:    mat-palette($mat-custom, 900);
+
+$my-app-theme: mat-light-theme(
+  $my-app-primary,
+  $my-app-accent,
+  $my-app-warn
+);
