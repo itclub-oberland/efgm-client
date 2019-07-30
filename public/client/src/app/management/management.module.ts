@@ -8,10 +8,10 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { EntrypointComponent } from './shared/entrypoint/entrypoint.component';
 import { ManagementRoutingModule } from './management-routing.module';
 import { MaterialModule } from '../public/shared/material/material.module';
-import { SidenavComponent } from './shared/sidenav/sidenav.component';
-import { MainMenuComponent } from './shared/main-menu/main-menu.component';
-import { SubMenuComponent } from './shared/sub-menu/sub-menu.component';
-import { SideMenuComponent } from './shared/side-menu/side-menu.component';
+import { SidenavComponent } from './shared/layout/left-menu/sidenav/sidenav.component';
+import { MainMenuComponent } from './shared/layout/left-menu/main-menu/main-menu.component';
+import { SubMenuComponent } from './shared/layout/left-menu/sub-menu/sub-menu.component';
+import { SideMenuComponent } from './shared/layout/left-menu/side-menu/side-menu.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { PersonalInfoComponent } from './pages/personal-info/personal-info.component';
 
