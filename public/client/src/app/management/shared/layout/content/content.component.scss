@@ -1,0 +1,10 @@
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-top: 120px;
+  z-index: 6;
+  height: calc(100% - 120px);
+}
+

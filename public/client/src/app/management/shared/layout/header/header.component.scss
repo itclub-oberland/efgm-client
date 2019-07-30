@@ -1,101 +1,41 @@
-
-#main {
+.navbar {
+  background: #fff;
+  height: 120px;
+  padding: 1.5rem 0 1.5rem 0;
+  -webkit-box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+  box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-#header-area {
-  display: flex;
-  width: 1100px;
-  height: 200px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#homeAndLanguageArea {
-  display: flex;
-  width: 100%;
-  height: 20px;
-  background-color: #F2F2F2;
-  margin-top: 0px;
-}
-
-.orange-border {
-  display: flex;
-  height: 5px;
-  width: 100%;
-  background-color: #D48A04;
-  justify-content: center;
-
-}
-
-#logoAndSearchArea {
-  display: flex;
-  width: 100%;
+  justify-content: space-between;
   align-items: center;
-}
 
-#logo {
-  width: 360px;
-  height: 100px;
-  background-image: url('/assets/logo.png');
-  justify-content: flex-start;
-}
+  .navbar-left{
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    padding-left: 50px;
+    .toggle-holder{
+      mat-icon{
+        font-size: 32px;
+      }
+    }
+  }
 
-input {
-  width: 310px;
-  height: 32px;
-  background-color: #F2F2F2;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  padding-left: 20px;
-  font-style: italic;
-  justify-content: flex-end;
-  margin-left: 400px;
-}
+  .navbar-right {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    margin-right: 50px;
+    .user {
+      text-align: right;
+    }
+  }
 
-#search-icon {
-  margin-left: -25px;
-}
-
-#home-icon {
-  justify-content: flex-start;
-  text-align: left;
-  color: #505050;
-  width: 20px;
-  height: 17px;
-}
-
-a {
-  text-decoration: none;
-  margin-right: 10px;
-  font-family: Frutiger, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#language-area {
-  margin-left: 73%;
-}
-
-#dashboard {
-  display: block;
-  flex-direction: column;
-  width: 250px;
-  height: 380px;
-  margin-left: 250px;
-  background-color: #D48A04;
-  opacity: 0.7;
-  padding: 10px;
 
 
 }
 
-button {display: block;
-  width: 200px;
-  height: 80px;
-  margin-left: 25px;
-
+.fixed-bottom, .fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
-
-button:first-child{margin-top: 30px;}

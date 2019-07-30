@@ -1,0 +1,14 @@
+<efgm-sidenav #mainnav>
+  <div menu class="side-bar">
+    <efgm-main-menu [menu]="menuData" [submenu]="submenu"></efgm-main-menu>
+    <div menu class="side-bar">
+      <efgm-sub-menu #submenu></efgm-sub-menu>
+    </div>
+  </div>
+  <div content>
+      <div class="page-container">
+        <efgm-breadcrumb ></efgm-breadcrumb>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+</efgm-sidenav>

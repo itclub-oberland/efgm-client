@@ -1,0 +1,15 @@
+<div class="sub-menu">
+  <section class="ps">
+    <ul class="list-unstyled">
+      <li [ngClass]="{'active': selected === i} "
+           *ngFor="let item of submenus; let i = index"
+           [routerLink]="item.nav"
+           (click)="selectMenu(i)">
+        <a>
+          <mat-icon>{{item.icon}}</mat-icon>
+          <span>{{item.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>

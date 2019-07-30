@@ -1,0 +1,11 @@
+<div class="sidebar">
+  <div class="main-menu">
+    <ul class="list-unstyled">
+        <li [ngClass]="{'active': selected === i} " *ngFor="let item of menu; let i = index" (click)="selectMenu(i)">
+        <div>
+          <mat-icon>{{item.icon}}</mat-icon>{{item.name}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
