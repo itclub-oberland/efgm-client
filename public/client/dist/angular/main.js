@@ -178,7 +178,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<efgm-header></efgm-header>\n<efgm-content>\n    <router-outlet></router-outlet>\n</efgm-content>\n<efgm-footer></efgm-footer>\n"
+module.exports = "<efgm-header [username]=\"username\"></efgm-header>\n<efgm-content>\n    <router-outlet></router-outlet>\n</efgm-content>\n<efgm-footer></efgm-footer>\n"
 
 /***/ }),
 
@@ -222,10 +222,9 @@ var EntrypointComponent = /** @class */ (function () {
     }
     EntrypointComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var email = this.cookieService.get('current_user_email') || null;
-        var token = this.cookieService.get('current_user_token') || null;
-        this.loginService.getByCookie({ email: email, token: token }).subscribe(function (response) {
-            console.log('hele buraya bir bakasin 222', response);
+        this.username = this.cookieService.get('current_user_email') || null;
+        var token = this.cookieService.get('current_access_token') || null;
+        this.loginService.getByCookie({ token: token }).subscribe(function (response) {
             if (response && response.authorized) {
                 _this.router.navigate(['management']);
             }
@@ -369,7 +368,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- FIX THIS FILE-->\n<!-- https://tburleson-layouts-demos.firebaseapp.com/#/docs -->\n<div style=\"text-align:center\"></div>\n<div id=\"main\">\n  <div id=\"header-area\">\n    <div id=\"homeAndLanguageArea\">\n      <div id=\"home-icon\"> <i class=\"material-icons\" id=\"home-icon\">\n          home\n        </i></div>\n      <div id=\"language-area\">\n        <a href=\"\">Deutsch</a>\n        <a href=\"\">English</a>\n        <a href=\"\">Français</a></div>\n        <a href=\"\">Italien</a>\n        <a href=\"\" [routerLink]=\"['/', 'home']\">logout</a>\n    </div>\n    <div class=\"orange-border\"></div>\n    <div id=\"logoAndSearchArea\">\n      <div id=\"logo\"></div>\n      <div id=\"search\"><input type=\"text\" placeholder=\"Suchen\"></div>\n      <i class=\"material-icons\" id=\"search-icon\">\n        search\n      </i>\n    </div>\n\n  </div>\n</div>\n\n<div id=\"dashboard\">\n  <button mat-raised-button>Anfragen</button>\n  <button mat-raised-button>Offerten</button>\n  <button mat-raised-button>Activity Log</button>\n  <button mat-raised-button>Message</button>\n\n</div>\n"
+module.exports = "<!-- FIX THIS FILE-->\n<!-- https://tburleson-layouts-demos.firebaseapp.com/#/docs -->\n<div style=\"text-align:center\"></div>\n<div id=\"main\">\n  <div id=\"header-area\">\n    <div id=\"homeAndLanguageArea\">\n      <div id=\"home-icon\">\n        <i class=\"material-icons\" id=\"home-icon\">\n          home\n        </i>\n      </div>\n      <div>\n        <span *ngIf=\"username\"> {{username}}</span>\n      </div>\n      <div id=\"language-area\">\n        <a href=\"\">Deutsch</a>\n        <a href=\"\">English</a>\n        <a href=\"\">Français</a></div>\n        <a href=\"\">Italien</a>\n        <a href=\"/authentication/logout\">logout</a>\n    </div>\n    <div class=\"orange-border\"></div>\n    <div id=\"logoAndSearchArea\">\n      <div id=\"logo\"></div>\n      <div id=\"search\"><input type=\"text\" placeholder=\"Suchen\"></div>\n      <i class=\"material-icons\" id=\"search-icon\">\n        search\n      </i>\n    </div>\n\n  </div>\n</div>\n\n<div id=\"dashboard\">\n  <button mat-raised-button>Anfragen</button>\n  <button mat-raised-button>Offerten</button>\n  <button mat-raised-button>Activity Log</button>\n  <button mat-raised-button>Message</button>\n\n</div>\n"
 
 /***/ }),
 
@@ -403,6 +402,10 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], HeaderComponent.prototype, "username", void 0);
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'efgm-header',

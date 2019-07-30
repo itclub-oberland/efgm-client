@@ -1,0 +1,10 @@
+<div>
+  <mat-drawer-container class="efgm-container" autosize>
+    <mat-drawer #sidenav class="efgm-sidenav" mode="side"> <!--[@slideInOut]="menuState"-->
+      <ng-content select="[menu]"></ng-content>
+    </mat-drawer>
+    <div class="efgm-sidenav-content" >
+      <ng-content select="[content]"></ng-content>
+    </div>
+  </mat-drawer-container>
+</div>

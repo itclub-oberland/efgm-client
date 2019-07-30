@@ -1,0 +1,14 @@
+.efgm-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.efgm-sidenav{
+  min-width: 300px;
+  width: 20%;
+}
+.efgm-sidenav-content{
+  flex: 1 1 auto;
+  padding-top: 25px;
+  padding-left: 75px;
+}

@@ -10,15 +10,6 @@ var indexRouter = require('./routes/authentication');
 
 var app = express();
 
-
-// TO BE REMOVED
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
 app.use(session({
   secret: 'wep-api-efgm-secret-2342346756',
   resave: true,
@@ -34,35 +25,21 @@ app.use(cors());
 
 
 const appPath = path.join(__dirname, 'public', 'client', 'dist', 'angular');
+
 app.use(express.static(appPath));
 
-app.all('/*', function(req, res, next) {
-  // Just send the index.html for other files to support HTML5Mode
-  if(req.url.indexOf('authentication') > -1) {
-    next();
-    return;
-  }
-  else{
-    res.sendFile('index.html', { root: appPath });
-  }
-});
+app.all('/*', (req, res, next) => req.url.indexOf('authentication') > -1
+                                      ? next()
+                                      : res.sendFile('index.html', { root: appPath }));
 
 app.use('/authentication', indexRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+app.use((req, res, next) => next(createError(404)));
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
-  // res.render('error');
 });
 
 module.exports = app;

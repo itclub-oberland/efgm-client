@@ -1,13 +1,13 @@
 const {google} = require('googleapis');
+const _ = require('lodash');
+const axios = require('axios');
 
-/*******************/
-/** CONFIGURATION **/
-/*******************/
+const googleAuthUrl = 'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=';
 
 const googleConfig = {
-  clientId: '489012444936-nu13cu6tgsjb87ft77trdnccs5eh0i57.apps.googleusercontent.com', // e.g. asdfghjkljhgfdsghjk.apps.googleusercontent.com
-  clientSecret: 'gkt9diba2UnE5qc67kh15R1R', // e.g. _ASDFA%DFASDFASDFASD#FAD-
-  redirect: 'http://localhost:3000/authentication/googleCode', // this must match your google api settings
+  clientId: '489012444936-nu13cu6tgsjb87ft77trdnccs5eh0i57.apps.googleusercontent.com',
+  clientSecret: 'gkt9diba2UnE5qc67kh15R1R',
+  redirect: 'http://localhost:3000/authentication/googleCode',
 };
 
 const oauth2Client = new google.auth.OAuth2(
@@ -16,28 +16,31 @@ const oauth2Client = new google.auth.OAuth2(
   googleConfig.redirect
 );
 
-// generate a url that asks permissions for Blogger and Google Calendar scopes
 const scopes = [
   'https://www.googleapis.com/auth/plus.me',
-  'https://www.googleapis.com/auth/userinfo.profile',
-  'https://www.googleapis.com/auth/userinfo.email'
+  'https://www.googleapis.com/auth/userinfo.email',
 ];
 
 const url = oauth2Client.generateAuthUrl({
-  // 'online' (default) or 'offline' (gets refresh_token)
   access_type: 'offline',
-
-  // If you only need one scope you can pass it as a string
   scope: scopes
 });
 
-oauth2Client.on('tokens', (tokens) => {
-  if (tokens.refresh_token) {
-    // store the refresh_token in my database!
-    // console.log('REFRESHTEN 1', tokens.refresh_token);
+async function logOut(req, res) {
+  try {
+    const access_token = _.get(req, 'cookies.current_access_token', false);
+    await axios.get(`https://accounts.google.com/o/oauth2/revoke?token=${access_token}`);
+
+    await axios.get(`https://mail.google.com/mail/u/0/?logout&hl=en`);
+
+  } catch (error) {
+    console.error(_.get(error, 'data.error', false));
+  } finally {
+    res.cookie('current_user_email', '');
+    res.cookie('current_access_token', '');
+    res.redirect('/');
   }
-  //console.log('REFRESHTEN 2', tokens.access_token);
-});
+}
 
 async function getGoogleAccountFromCode(code) {
   try {
@@ -63,5 +66,7 @@ async function getGoogleAccountFromCode(code) {
 
 module.exports = {
   getUrl : url,
-  getGoogleAccountFromCode
+  getGoogleAccountFromCode,
+  logOut,
+  googleAuthUrl
 }
