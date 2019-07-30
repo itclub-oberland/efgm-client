@@ -18,7 +18,6 @@ export class EntrypointComponent implements OnInit {
   ngOnInit() {
     this.username = this.cookieService.get('current_user_email') || null;
     const token = this.cookieService.get('current_access_token') || null;
-    /*
     this.loginService.getByCookie({token}).subscribe(response => {
       if (response && response.authorized) {
         this.router.navigate(['management']);
@@ -26,7 +25,6 @@ export class EntrypointComponent implements OnInit {
         this.router.navigate(['home']);
       }
     });
-    */
   }
 
 }
